@@ -1,0 +1,36 @@
+<%= flash[:notice] %>
+<h1>Student data</h1><hr>
+
+
+<%= form_with url: "/student/new", method: :post do |form| %>
+<div class= "field">
+    <%= form.label :name %>
+    <%= form.text_field :name%>
+</div>
+<div class= "field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+</div>
+<div class= "field">
+    <%= form.label :mark1 %>
+    <%= form.number_field :mark1%>
+</div>
+<div class= "field">
+    <%= form.label :mark2 %>
+    <%= form.number_field :mark2%>
+</div>
+<div class= "field">
+    <%= form.label :mark3 %>
+    <%= form.number_field :mark3%>
+</div>
+<div class= "field">
+    <%= form.label :mark4 %>
+    <%= form.number_field :mark4%>
+</div>
+<div class= "field">
+    <%= form.label :mark5 %>
+    <%= form.number_field :mark5%>
+<div class= "actions">
+    <%= form.submit "Submit" %>
+</div>
+<% end %>

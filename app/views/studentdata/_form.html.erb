@@ -1,0 +1,52 @@
+<%= form_with(model: studentdatum) do |form| %>
+  <% if studentdatum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(studentdatum.errors.count, "error") %> prohibited this studentdatum from being saved:</h2>
+
+      <ul>
+        <% studentdatum.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :age %>
+    <%= form.number_field :age %>
+  </div>
+
+  <div class="field">
+    <%= form.label :image %>
+    <%= form.file_field :image %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= form.label :rno %>
+    <%= form.number_field :rno %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mobile %>
+    <%= form.number_field :mobile %>
+  </div>
+
+  <div class="field">
+    <%= form.label :course %>
+    <%= form.text_field :course %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

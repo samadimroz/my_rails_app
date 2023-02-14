@@ -1,0 +1,51 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Telephone Directory</h1>
+
+<table style="width: 90%; margin: 50px; border: 2px solid;">
+  <thead style="text-align: center;  border: 1px solid;">
+    <tr>
+      <th style="text-align: center;">First name</th>
+      <th style="text-align: center;">Last name</th>
+      <th style="text-align: center;">Phone</th>
+      <th style="text-align: center;">Email id</th>
+      <th style="text-align: center;">Door no</th>
+      <th style="text-align: center;">Street</th>
+      <th style="text-align: center;">Area</th>
+      <th style="text-align: center;">City</th>
+      <th style="text-align: center;">State</th>
+      <th style="text-align: center;">Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @telephone_dirs.each do |telephone_dir| %>
+      <tr style="text-align: center;  border: 1px solid;">
+        <td><%= telephone_dir.firstname %></td>
+        <td><%= telephone_dir.lastname %></td>
+        <td><%= telephone_dir.phone %></td>
+        <td><%= telephone_dir.emailid %></td>
+        <td><%= telephone_dir.doorno %></td>
+        <td><%= telephone_dir.street %></td>
+        <td><%= telephone_dir.area %></td>
+        <td><%= telephone_dir.city %></td>
+        <td><%= telephone_dir.state %></td>
+        <td><%= telephone_dir.country %></td>
+        <td><button style="border-radius:8px; background:#4caf50;"> <%= link_to 'Show', telephone_dir %></button></td>
+        <td><button style="border-radius:8px; background:#ffbb05; "> <%= link_to 'Edit', edit_telephone_dir_path(telephone_dir) %></button></td>
+        <td><button style="border-radius:8px; background:#d50000; "> <%= link_to 'Destroy', telephone_dir, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<button style="border-radius:2px;">
+<%= link_to 'New Telephone Contact', new_telephone_dir_path %>
+</button><br>
+
+<div class="apple_pagination">
+<%= will_paginate @telephone_dirs %>
+</div>

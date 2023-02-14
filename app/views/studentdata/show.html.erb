@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @studentdatum.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @studentdatum.age %>
+</p>
+
+<p>
+  <strong>Image:</strong>
+  <%= image_tag(@studentdatum.image_url,height:600) if @studentdatum.image.present? %>
+</p>
+
+<p>
+  <strong>Address:</strong>
+  <%= @studentdatum.address %>
+</p>
+
+<p>
+  <strong>Rno:</strong>
+  <%= @studentdatum.rno %>
+</p>
+
+<p>
+  <strong>Mobile:</strong>
+  <%= @studentdatum.mobile %>
+</p>
+
+<p>
+  <strong>Course:</strong>
+  <%= @studentdatum.course %>
+</p>
+
+<%= link_to 'Edit', edit_studentdatum_path(@studentdatum) %> |
+<%= link_to 'Back', studentdata_path %>

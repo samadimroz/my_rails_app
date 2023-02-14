@@ -1,0 +1,57 @@
+<H1> Hello Rails!! </H1>
+<h2> Form Helpers: </h2>
+<%= form_with do |form| %>
+    Fill these:
+    <%= form.label :bname, "Book name"%>
+    <%= form.text_field :bname%>
+    <%= form.label :aname, "Author name"%>
+    <%= form.text_field :aname%>
+    <%= form.submit "Click here"%><br>
+    Check Boxes:
+    <%= form.label :check_box, "Both are check boxes"%>
+    <%= form.check_box :check_box1%>
+    <%= form.check_box :check_box2%><br>
+    Radio Buttons:
+    <%= form.label :select, "Only one can be selected:"%>
+    <%= form.radio_button :age, "Button1"%>
+    <%= form.radio_button :age, "Button2"%><br>
+    
+    <%= form.label :text_area, "Text Area"%>
+    <%= form.text_area :text_area, size: "50x3" %><br>
+    
+    <%= form.label :password, "Password"%>
+    <%= form.password_field :password %><br>
+    
+    <%= form.label :date, "Date"%>
+    <%= form.date_field :date %>
+
+    <%= form.label :time, "Time"%>
+    <%= form.time_field :time%><br>
+
+    <%= form.label :dnt, "Enter date & time:"%>
+    <%= form.datetime_local_field :graduation_day %><br>
+    
+    <%= form.label :month, "Selecting Month"%>
+    <%= form.month_field :month %>
+
+    <%= form.label :week, "Selecting Week"%>
+    <%= form.week_field :week %><br>
+    
+    <%= form.label :search, "Search Field"%>
+    <%= form.search_field :search %>
+
+    <%= form.label :email, "Email address:"%>
+    <%= form.email_field :email %>
+
+    <%= form.label :phone, "Select Phone"%>
+    <%= form.telephone_field :phone %>
+
+    <%= form.label :url, "Select URL"%>
+    <%= form.url_field :url %>
+
+    <%= form.label :color, "Select color"%>
+    <%= form.color_field :color %><br><br>
+
+    <%= form.submit "Submit" %>
+    
+<% end %>

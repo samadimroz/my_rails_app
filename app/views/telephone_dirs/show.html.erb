@@ -1,0 +1,54 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @telephone_dir.firstname %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @telephone_dir.lastname %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @telephone_dir.phone %>
+</p>
+
+<p>
+  <strong>Email id:</strong>
+  <%= @telephone_dir.emailid %>
+</p>
+
+<p>
+  <strong>Door no:</strong>
+  <%= @telephone_dir.doorno %>
+</p>
+
+<p>
+  <strong>Street:</strong>
+  <%= @telephone_dir.street %>
+</p>
+
+<p>
+  <strong>Area:</strong>
+  <%= @telephone_dir.area %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @telephone_dir.city %>
+</p>
+
+<p>
+  <strong>State:</strong>
+  <%= @telephone_dir.state %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @telephone_dir.country %>
+</p>
+
+<button style="border-radius:2px;"><%= link_to 'Edit', edit_telephone_dir_path(@telephone_dir) %></button> |
+<button style="border-radius:2px;"><%= link_to 'Back', telephone_dirs_path %></button>
